@@ -1,11 +1,27 @@
 import Ember from 'ember';
-import UnitTypes from 'unit-types/lib/unit-types';
+import UnitTypes from 'unit-utils/lib/unit-types';
+
+function findBy(collection, attr, value) {
+  let item;
+
+  for (let i = 0; i < collection.length; i++) {
+    item = collection[i];
+
+    if (item.get(attr) === value) {
+      break;
+    }
+  }
+
+  return item;
+}
 
 export function unitShortName(_, { type, preference }) {
-  let unitType = UnitTypes.findBy('preferenceKey', type);
-  let unit = unitType.units.findBy('name', preference);
+  let unitType = findBy(UnitTypes, 'preferenceKey', type);
+  let units = unitType.get('units');
+  let unit = findBy(units, 'name', preference);
+  let shortName = unit.get('shortName');
 
-  return unit.get('shortName');
+  return shortName;
 }
 
 export default Ember.Helper.helper(unitShortName);
