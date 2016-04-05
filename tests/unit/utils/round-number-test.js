@@ -13,6 +13,11 @@ test('it rounds a number to a configurable number of decimal places', function(a
   assert.equal(result, 123.1);
 });
 
+test('it rounds a number to a whole number if precision is 0', function(assert) {
+  let result = roundNumber(123.123123, 0);
+  assert.equal(result, 123);
+});
+
 test('it returns undefined when nothing provided', function(assert) {
   let result = roundNumber();
   assert.equal(result, undefined);
