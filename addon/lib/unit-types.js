@@ -16,7 +16,7 @@ export default [
     preferenceKey: 'smallLengthUnits',
     units: [
       Ember.Object.create({ name: 'centimeters', shortName: 'cm' }),
-      Ember.Object.create({ name: 'inches', shortName: 'in' })
+      Ember.Object.create({ name: 'inches', shortName: 'in' }),
     ]
   }),
   Ember.Object.create({
@@ -24,8 +24,8 @@ export default [
     base: 'kilograms',
     preferenceKey: 'massUnits',
     units: [
+      Ember.Object.create({ name: 'kilograms', shortName: 'kg' }),
       Ember.Object.create({ name: 'pounds', shortName: 'lbs' }),
-      Ember.Object.create({ name: 'kilograms', shortName: 'kg' })
     ]
   })
 ];
