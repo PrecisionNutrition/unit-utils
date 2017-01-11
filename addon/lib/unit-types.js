@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
-export default [
+const {
+  A,
+} = Ember;
+
+export default A([
   Ember.Object.create({
     name: 'length',
     base: 'meters',
@@ -28,4 +32,4 @@ export default [
       Ember.Object.create({ name: 'pounds', shortName: 'lbs' }),
     ]
   })
-];
+]);
