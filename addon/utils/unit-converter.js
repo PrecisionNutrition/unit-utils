@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { isEmpty } = Ember;
+import { isEmpty } from '@ember/utils';
 
 const SUPPORTED_CONVERSIONS = {
   centimeters: {

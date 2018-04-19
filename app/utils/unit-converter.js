@@ -1,1 +1,1 @@
-export { default } from 'unit-utils/utils/unit-converter';
+export { default } from '@precision-nutrition/unit-utils/utils/unit-converter';

@@ -1,6 +1,5 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'unit-utils'
+  name: '@precision-nutrition/unit-utils'
 };

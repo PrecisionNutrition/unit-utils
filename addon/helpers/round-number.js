@@ -1,5 +1,5 @@
-import Ember from 'ember';
-import { default as roundNumberSuper } from 'unit-utils/utils/round-number';
+import { helper as buildHelper } from '@ember/component/helper';
+import { default as roundNumberSuper } from '@precision-nutrition/unit-utils/utils/round-number';
 
 export function roundNumber(_, { value, precision=0 }) {
   let roundedValue = roundNumberSuper(value, precision);
@@ -7,4 +7,4 @@ export function roundNumber(_, { value, precision=0 }) {
   return roundedValue;
 }
 
-export default Ember.Helper.helper(roundNumber);
+export default buildHelper(roundNumber);

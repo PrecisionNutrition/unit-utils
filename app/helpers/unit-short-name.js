@@ -1,1 +1,1 @@
-export { default, unitShortName } from 'unit-utils/helpers/unit-short-name';
+export { default, unitShortName } from '@precision-nutrition/unit-utils/helpers/unit-short-name';
