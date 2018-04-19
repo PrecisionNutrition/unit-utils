@@ -1,3 +1,3 @@
-import UnitTypes from 'unit-utils/lib/unit-types';
+import UnitTypes from '@precision-nutrition/unit-utils/lib/unit-types';
 
 export default UnitTypes;

@@ -1,6 +1,6 @@
-import Ember from 'ember';
-import { default as unitConverterSuper } from 'unit-utils/utils/unit-converter';
-import roundNumber from 'unit-utils/utils/round-number';
+import { helper as buildHelper } from '@ember/component/helper';
+import { default as unitConverterSuper } from '@precision-nutrition/unit-utils/utils/unit-converter';
+import roundNumber from '@precision-nutrition/unit-utils/utils/round-number';
 
 export function unitConverter(_, { value, fromUnit, toUnit, precision }) {
   let convertedValue = unitConverterSuper({ value, fromUnit, toUnit });
@@ -9,4 +9,4 @@ export function unitConverter(_, { value, fromUnit, toUnit, precision }) {
   return roundedValue;
 }
 
-export default Ember.Helper.helper(unitConverter);
+export default buildHelper(unitConverter);

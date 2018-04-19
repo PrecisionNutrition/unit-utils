@@ -1,35 +1,32 @@
-import Ember from 'ember';
-
-const {
-  A,
-} = Ember;
+import EmberObject from '@ember/object';
+import { A } from '@ember/array';
 
 export default A([
-  Ember.Object.create({
+  EmberObject.create({
     name: 'length',
     base: 'meters',
     preferenceKey: 'lengthUnits',
     units: A([
-      Ember.Object.create({ name: 'meters', shortName: 'm' }),
-      Ember.Object.create({ name: 'feet', shortName: 'ft' }),
+      EmberObject.create({ name: 'meters', shortName: 'm' }),
+      EmberObject.create({ name: 'feet', shortName: 'ft' }),
     ]),
   }),
-  Ember.Object.create({
+  EmberObject.create({
     name: 'small length',
     base: 'centimeters',
     preferenceKey: 'smallLengthUnits',
     units: A([
-      Ember.Object.create({ name: 'centimeters', shortName: 'cm' }),
-      Ember.Object.create({ name: 'inches', shortName: 'in' }),
+      EmberObject.create({ name: 'centimeters', shortName: 'cm' }),
+      EmberObject.create({ name: 'inches', shortName: 'in' }),
     ]),
   }),
-  Ember.Object.create({
+  EmberObject.create({
     name: 'weight',
     base: 'kilograms',
     preferenceKey: 'massUnits',
     units: A([
-      Ember.Object.create({ name: 'kilograms', shortName: 'kg' }),
-      Ember.Object.create({ name: 'pounds', shortName: 'lbs' }),
+      EmberObject.create({ name: 'kilograms', shortName: 'kg' }),
+      EmberObject.create({ name: 'pounds', shortName: 'lbs' }),
     ]),
   }),
 ]);

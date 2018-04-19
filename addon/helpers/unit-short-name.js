@@ -1,5 +1,5 @@
-import Ember from 'ember';
-import UnitTypes from 'unit-utils/lib/unit-types';
+import { helper as buildHelper } from '@ember/component/helper';
+import UnitTypes from '@precision-nutrition/unit-utils/lib/unit-types';
 
 function findBy(collection, attr, value) {
   let item;
@@ -24,4 +24,4 @@ export function unitShortName(_, { type, preference }) {
   return shortName;
 }
 
-export default Ember.Helper.helper(unitShortName);
+export default buildHelper(unitShortName);

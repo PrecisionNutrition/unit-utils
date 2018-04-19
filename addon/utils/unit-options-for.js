@@ -1,7 +1,5 @@
-import UnitTypes from 'unit-utils/lib/unit-types';
-import Ember from 'ember';
-
-const { isEmpty } = Ember;
+import { isEmpty } from '@ember/utils';
+import UnitTypes from '@precision-nutrition/unit-utils/lib/unit-types';
 
 export default function unitOptionsFor(unitTypeName) {
   if (isEmpty(unitTypeName)) {
