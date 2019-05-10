@@ -158,7 +158,9 @@ workflows:
             - lint_project
 
       - run_beta_tests:
-          requires: lint_project
+          requires:
+            - lint_project
 
       - run_canary_tests:
-          requires: lint_project
+          requires:
+            - lint_project
