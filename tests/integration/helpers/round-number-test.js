@@ -17,7 +17,10 @@ module('Integration | Helper | round-number', function(hooks) {
 
     await render(hbs`{{round-number value=value precision=precision}}`);
 
-    assert.dom('*').hasText('123');
+    assert.equal(
+      this.element.textContent,
+      '123'
+    );
   });
 
   test('it rounds to the specified precision', async function(assert) {
@@ -31,6 +34,9 @@ module('Integration | Helper | round-number', function(hooks) {
 
     await render(hbs`{{round-number value=value precision=precision}}`);
 
-    assert.dom('*').hasText('123.5');
+    assert.equal(
+      this.element.textContent,
+      '123.5'
+    );
   });
 });
