@@ -17,6 +17,9 @@ module('Integration | Helper | unit-short-name', function(hooks) {
 
     await render(hbs`{{unit-short-name type=type preference=preference}}`);
 
-    assert.dom('*').hasText('cm');
+    assert.equal(
+      this.element.textContent,
+      'cm'
+    );
   });
 });
