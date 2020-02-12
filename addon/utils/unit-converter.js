@@ -3,7 +3,7 @@ import { isEmpty } from '@ember/utils';
 const SUPPORTED_CONVERSIONS = {
   centimeters: {
     inches(centimeters) {
-      return centimeters * 0.3937;
+      return centimeters * 0.3937007874;
     }
   },
 
@@ -15,25 +15,25 @@ const SUPPORTED_CONVERSIONS = {
 
   meters: {
     feet(meters) {
-      return meters * 3.281;
+      return meters * 3.28084;
     }
   },
 
   feet: {
     meters(feet) {
-      return feet * 0.305;
+      return feet * 0.3048;
     }
   },
 
   kilograms: {
     pounds(kilograms) {
-      return kilograms * 2.20462;
+      return kilograms * 2.20462262185;
     }
   },
 
   pounds: {
     kilograms(pounds) {
-      return pounds * 0.4536;
+      return pounds * 0.45359237;
     }
   }
 };
