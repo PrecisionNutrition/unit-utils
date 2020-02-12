@@ -29,7 +29,7 @@ module('Unit | Utility | unit converter', function() {
 
   test('converts centimeters to inches', function(assert) {
     let result = unitConverter({ value: 5.6, fromUnit: 'centimeters', toUnit: 'inches' });
-    let expectedResult = 2.20472;
+    let expectedResult = 2.20472440944;
 
     assert.equal(result, expectedResult);
   });
@@ -43,28 +43,28 @@ module('Unit | Utility | unit converter', function() {
 
   test('converts kilograms to pounds', function(assert) {
     let result = unitConverter({ value: 52.3, fromUnit: 'kilograms', toUnit: 'pounds' });
-    let expectedResult = 115.30162599999998;
+    let expectedResult = 115.30176312275499;
 
     assert.equal(result, expectedResult);
   });
 
   test('converts pounds to kilograms', function(assert) {
     let result = unitConverter({ value: 155.9, fromUnit: 'pounds', toUnit: 'kilograms' });
-    let expectedResult = 70.71624;
+    let expectedResult = 70.71505048300001;
 
     assert.equal(result, expectedResult);
   });
 
   test('converts meters to feet', function(assert) {
     let result = unitConverter({ value: 1.4, fromUnit: 'meters', toUnit: 'feet' });
-    let expectedResult = 4.5934;
+    let expectedResult = 4.593176;
 
     assert.equal(result, expectedResult);
   });
 
   test('converst feet to meters', function(assert) {
     let result = unitConverter({ value: 5.9, fromUnit: 'feet', toUnit: 'meters' });
-    let expectedResult = 1.7995;
+    let expectedResult = 1.7983200000000001;
 
     assert.equal(result, expectedResult);
   });
