@@ -1,5 +1,5 @@
 import { isEmpty } from '@ember/utils';
-import UnitTypes from '@precision-nutrition/unit-utils/lib/unit-types';
+import UnitTypes from '../lib/unit-types';
 
 export default function unitOptionsFor(unitTypeName) {
   if (isEmpty(unitTypeName)) {
