@@ -1,5 +1,5 @@
 import { helper as buildHelper } from '@ember/component/helper';
-import UnitTypes from '@precision-nutrition/unit-utils/lib/unit-types';
+import UnitTypes from '../lib/unit-types';
 
 function findBy(collection, attr, value) {
   let item;
