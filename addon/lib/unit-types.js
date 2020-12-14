@@ -4,7 +4,7 @@ export default [
     base: 'meters',
     preferenceKey: 'lengthUnits',
     units: [
-      { name: 'meters', shortName: 'm' },
+      { name: 'centimeters', shortName: 'cm' },
       { name: 'feet', shortName: 'ft' },
     ],
   },
