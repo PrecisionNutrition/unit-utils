@@ -1,4 +1,4 @@
-export default function roundNumber(value, precision=2) {
+export default function roundNumber(value, precision = 2) {
   if (value === null || isNaN(value)) {
     return;
   }

@@ -6,7 +6,7 @@ export default function unitOptionsFor(unitTypeName) {
     return;
   }
 
-  const unitType = unitTypes.find(unitType => unitType.name === unitTypeName);
+  const unitType = unitTypes.find((unitType) => unitType.name === unitTypeName);
   const { units } = unitType;
 
   return units;

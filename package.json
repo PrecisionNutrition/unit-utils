@@ -33,6 +33,7 @@
     "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.0.2",
     "@glimmer/tracking": "^1.0.2",
+    "@precision-nutrition/prettier-config": "^1.1.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^1.6.0",
@@ -53,8 +54,11 @@
     "eslint": "^7.11.0",
     "eslint-plugin-ember": "^9.3.0",
     "eslint-plugin-node": "^11.1.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
     "qunit-dom": "^1.5.0"
   },
   "engines": {
@@ -70,5 +74,23 @@
   "bugs": {
     "url": "https://github.com/PrecisionNutrition/unit-utils/issues"
   },
-  "homepage": "https://github.com/PrecisionNutrition/unit-utils#readme"
+  "homepage": "https://github.com/PrecisionNutrition/unit-utils#readme",
+  "prettier": "@precision-nutrition/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{css,md,yml}": [
+      "prettier --write"
+    ],
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.hbs": [
+      "ember-template-lint --fix"
+    ]
+  }
 }
