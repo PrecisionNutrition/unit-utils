@@ -1,13 +1,13 @@
 import { isEmpty } from '@ember/utils';
-import UnitTypes from '../lib/unit-types';
+import unitTypes from '../lib/unit-types';
 
 export default function unitOptionsFor(unitTypeName) {
   if (isEmpty(unitTypeName)) {
     return;
   }
 
-  let unitType = UnitTypes.findBy('name', unitTypeName);
-  let options = unitType.get('units');
+  const unitType = unitTypes.find((unitType) => unitType.name === unitTypeName);
+  const { units } = unitType;
 
-  return options;
+  return units;
 }
