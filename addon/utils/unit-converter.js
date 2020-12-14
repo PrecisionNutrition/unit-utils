@@ -44,9 +44,9 @@ export default function unitConverter({ value, fromUnit, toUnit }) {
   }
 
   if (fromUnit !== toUnit) {
-    let conversions = SUPPORTED_CONVERSIONS[fromUnit];
-    let converter = conversions[toUnit];
-    let convertedValue = converter(value);
+    const conversions = SUPPORTED_CONVERSIONS[fromUnit];
+    const converter = conversions[toUnit];
+    const convertedValue = converter(value);
 
     return convertedValue;
   } else {

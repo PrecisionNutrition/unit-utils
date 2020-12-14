@@ -1,25 +1,14 @@
 import { helper as buildHelper } from '@ember/component/helper';
-import UnitTypes from '../lib/unit-types';
-
-function findBy(collection, attr, value) {
-  let item;
-
-  for (let i = 0; i < collection.length; i++) {
-    item = collection[i];
-
-    if (item.get(attr) === value) {
-      break;
-    }
-  }
-
-  return item;
-}
+import unitTypes from '../lib/unit-types';
 
 export function unitShortName(_, { type, preference }) {
-  let unitType = findBy(UnitTypes, 'preferenceKey', type);
-  let units = unitType.get('units');
-  let unit = findBy(units, 'name', preference);
-  let shortName = unit.get('shortName');
+  const unitType = unitTypes.find(item => item.preferenceKey === type);
+
+  const { units } = unitType;
+
+  const unit = units.find(unit => unit.name === preference);
+
+  const { shortName } = unit;
 
   return shortName;
 }
