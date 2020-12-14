@@ -5,6 +5,9 @@ const SUPPORTED_CONVERSIONS = {
     inches(centimeters) {
       return centimeters * 0.3937007874;
     },
+    feet(centimeters) {
+      return centimeters / 30.48;
+    },
   },
 
   inches: {
@@ -22,6 +25,9 @@ const SUPPORTED_CONVERSIONS = {
   feet: {
     meters(feet) {
       return feet * 0.3048;
+    },
+    centimeters(feet) {
+      return feet * 30.48;
     },
   },
 
