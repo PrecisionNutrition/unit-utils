@@ -27,3 +27,8 @@ export default [
     ],
   },
 ];
+
+export interface UnitOptions {
+  name: string;
+  shortName: string;
+}

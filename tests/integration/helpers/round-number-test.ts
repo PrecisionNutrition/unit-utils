@@ -2,11 +2,17 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import { TestContext } from 'ember-test-helpers';
+
+interface Context extends TestContext {
+  value: number;
+  precision: number;
+}
 
 module('Integration | Helper | round-number', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it rounds a number to a whole number if precision is 0', async function (assert) {
+  test('it rounds a number to a whole number if precision is 0', async function (this: Context, assert) {
     this.value = 123.123123;
     this.precision = 0;
 
@@ -15,7 +21,7 @@ module('Integration | Helper | round-number', function (hooks) {
     assert.equal(this.element.textContent, '123');
   });
 
-  test('it rounds to the specified precision', async function (assert) {
+  test('it rounds to the specified precision', async function (this: Context, assert) {
     this.value = 123.456;
     this.precision = 1;
 
