@@ -7,15 +7,10 @@ module('Integration | Helper | unit-short-name', function (hooks) {
   setupRenderingTest(hooks);
 
   test('finds the short name for a unit', async function (assert) {
-    let type = 'smallLengthUnits';
-    let preference = 'centimeters';
+    this.type = 'smallLengthUnits';
+    this.preference = 'centimeters';
 
-    this.setProperties({
-      type,
-      preference,
-    });
-
-    await render(hbs`{{unit-short-name type=type preference=preference}}`);
+    await render(hbs`{{unit-short-name type=this.type preference=this.preference}}`);
 
     assert.equal(this.element.textContent, 'cm');
   });
