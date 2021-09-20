@@ -1,4 +1,6 @@
-import unitConverter, { isSupportedConversion } from 'dummy/utils/unit-converter';
+import unitConverter, {
+  isSupportedConversion,
+} from '@precision-nutrition/unit-utils/utils/unit-converter';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | unit converter', function () {
