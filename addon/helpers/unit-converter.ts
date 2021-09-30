@@ -15,8 +15,8 @@ export function unitConverter(_: unknown[], named: Record<string, unknown>): num
   assert(`${fromUnit} cannot be converted to ${toUnit}`, isSupportedConversion(fromUnit, toUnit));
 
   assert(
-    'Parameter `precision` must be a Number',
-    typeof precision !== 'undefined' && typeof precision === 'number'
+    'Parameter `precision` is optional, but must be a number if provided',
+    typeof precision === 'undefined' || typeof precision === 'number'
   );
 
   const convertedValue = converter(value, fromUnit, toUnit);
