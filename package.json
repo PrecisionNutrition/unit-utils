@@ -1,6 +1,6 @@
 {
   "name": "@precision-nutrition/unit-utils",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "description": "A small collection of utilities that help with units of measure",
   "keywords": [
     "ember-addon"
